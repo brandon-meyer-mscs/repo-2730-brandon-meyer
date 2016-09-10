@@ -27,4 +27,5 @@ Public Class frmMain
         lblTotalSales.Text = Format(lblTotalSales.Text, "currency")
 
     End Sub
+
 End Class
