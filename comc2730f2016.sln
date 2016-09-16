@@ -15,6 +15,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bmeyer1f1", "bmeyer1f1\bmey
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bmeyer1g1", "bmeyer1g1\bmeyer1g1.vbproj", "{A65758C6-A75B-4B92-9435-DACC6E79DCD9}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bmeyer1h1", "bmeyer1h1\bmeyer1h1.vbproj", "{E91DADFB-2B42-49E3-B2C4-C5632A558052}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A65758C6-A75B-4B92-9435-DACC6E79DCD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A65758C6-A75B-4B92-9435-DACC6E79DCD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A65758C6-A75B-4B92-9435-DACC6E79DCD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E91DADFB-2B42-49E3-B2C4-C5632A558052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91DADFB-2B42-49E3-B2C4-C5632A558052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91DADFB-2B42-49E3-B2C4-C5632A558052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91DADFB-2B42-49E3-B2C4-C5632A558052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
