@@ -23,18 +23,18 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtSAR = New System.Windows.Forms.TextBox()
+        Me.lblSAR = New System.Windows.Forms.Label()
+        Me.lblBP = New System.Windows.Forms.Label()
+        Me.lblEuro = New System.Windows.Forms.Label()
         Me.lblRand = New System.Windows.Forms.Label()
-        Me.txtBP = New System.Windows.Forms.TextBox()
         Me.lblPound = New System.Windows.Forms.Label()
-        Me.txtEuro = New System.Windows.Forms.TextBox()
         Me.lblE = New System.Windows.Forms.Label()
         Me.btnNE = New System.Windows.Forms.Button()
         Me.btnEQ = New System.Windows.Forms.Button()
         Me.lblAmDoll = New System.Windows.Forms.Label()
         Me.txtAmDollar = New System.Windows.Forms.TextBox()
         Me.gBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblTD = New System.Windows.Forms.Label()
         Me.btnCalc = New System.Windows.Forms.Button()
         Me.txtPrice = New System.Windows.Forms.TextBox()
@@ -42,22 +42,22 @@ Partial Class frmMain
         Me.txtPound = New System.Windows.Forms.TextBox()
         Me.lblP = New System.Windows.Forms.Label()
         Me.gBox3 = New System.Windows.Forms.GroupBox()
-        Me.lblPr = New System.Windows.Forms.Label()
-        Me.txtPrev = New System.Windows.Forms.TextBox()
-        Me.lblCur = New System.Windows.Forms.Label()
-        Me.txtCurrent = New System.Windows.Forms.TextBox()
-        Me.btnCalcE = New System.Windows.Forms.Button()
+        Me.lblBill = New System.Windows.Forms.Label()
         Me.lblB = New System.Windows.Forms.Label()
-        Me.txtBill = New System.Windows.Forms.TextBox()
+        Me.btnCalcE = New System.Windows.Forms.Button()
+        Me.txtCurrent = New System.Windows.Forms.TextBox()
+        Me.lblCur = New System.Windows.Forms.Label()
+        Me.txtPrev = New System.Windows.Forms.TextBox()
+        Me.lblPr = New System.Windows.Forms.Label()
         Me.gBox4 = New System.Windows.Forms.GroupBox()
-        Me.lblN1 = New System.Windows.Forms.Label()
-        Me.txtNum1 = New System.Windows.Forms.TextBox()
-        Me.lblN2 = New System.Windows.Forms.Label()
-        Me.txtNum2 = New System.Windows.Forms.TextBox()
-        Me.btnCalcD = New System.Windows.Forms.Button()
-        Me.lblQ = New System.Windows.Forms.Label()
-        Me.txtQuotient = New System.Windows.Forms.TextBox()
+        Me.lblQuotient = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.lblQ = New System.Windows.Forms.Label()
+        Me.btnCalcD = New System.Windows.Forms.Button()
+        Me.txtNum2 = New System.Windows.Forms.TextBox()
+        Me.lblN2 = New System.Windows.Forms.Label()
+        Me.txtNum1 = New System.Windows.Forms.TextBox()
+        Me.lblN1 = New System.Windows.Forms.Label()
         Me.gBox1.SuspendLayout()
         Me.gBox2.SuspendLayout()
         Me.gBox3.SuspendLayout()
@@ -66,11 +66,11 @@ Partial Class frmMain
         '
         'gBox1
         '
-        Me.gBox1.Controls.Add(Me.txtSAR)
+        Me.gBox1.Controls.Add(Me.lblSAR)
+        Me.gBox1.Controls.Add(Me.lblBP)
+        Me.gBox1.Controls.Add(Me.lblEuro)
         Me.gBox1.Controls.Add(Me.lblRand)
-        Me.gBox1.Controls.Add(Me.txtBP)
         Me.gBox1.Controls.Add(Me.lblPound)
-        Me.gBox1.Controls.Add(Me.txtEuro)
         Me.gBox1.Controls.Add(Me.lblE)
         Me.gBox1.Controls.Add(Me.btnNE)
         Me.gBox1.Controls.Add(Me.btnEQ)
@@ -83,28 +83,38 @@ Partial Class frmMain
         Me.gBox1.TabStop = False
         Me.gBox1.Text = "p231 #1 Currency Converter"
         '
-        'txtSAR
+        'lblSAR
         '
-        Me.txtSAR.Location = New System.Drawing.Point(460, 46)
-        Me.txtSAR.Name = "txtSAR"
-        Me.txtSAR.Size = New System.Drawing.Size(100, 20)
-        Me.txtSAR.TabIndex = 9
+        Me.lblSAR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblSAR.Location = New System.Drawing.Point(476, 51)
+        Me.lblSAR.Name = "lblSAR"
+        Me.lblSAR.Size = New System.Drawing.Size(100, 20)
+        Me.lblSAR.TabIndex = 12
+        '
+        'lblBP
+        '
+        Me.lblBP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblBP.Location = New System.Drawing.Point(360, 50)
+        Me.lblBP.Name = "lblBP"
+        Me.lblBP.Size = New System.Drawing.Size(100, 20)
+        Me.lblBP.TabIndex = 11
+        '
+        'lblEuro
+        '
+        Me.lblEuro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblEuro.Location = New System.Drawing.Point(245, 49)
+        Me.lblEuro.Name = "lblEuro"
+        Me.lblEuro.Size = New System.Drawing.Size(100, 20)
+        Me.lblEuro.TabIndex = 10
         '
         'lblRand
         '
         Me.lblRand.AutoSize = True
-        Me.lblRand.Location = New System.Drawing.Point(457, 30)
+        Me.lblRand.Location = New System.Drawing.Point(476, 30)
         Me.lblRand.Name = "lblRand"
         Me.lblRand.Size = New System.Drawing.Size(103, 13)
         Me.lblRand.TabIndex = 8
         Me.lblRand.Text = "South African &Rand:"
-        '
-        'txtBP
-        '
-        Me.txtBP.Location = New System.Drawing.Point(363, 46)
-        Me.txtBP.Name = "txtBP"
-        Me.txtBP.Size = New System.Drawing.Size(69, 20)
-        Me.txtBP.TabIndex = 7
         '
         'lblPound
         '
@@ -114,13 +124,6 @@ Partial Class frmMain
         Me.lblPound.Size = New System.Drawing.Size(72, 13)
         Me.lblPound.TabIndex = 6
         Me.lblPound.Text = "British &Pound:"
-        '
-        'txtEuro
-        '
-        Me.txtEuro.Location = New System.Drawing.Point(245, 46)
-        Me.txtEuro.Name = "txtEuro"
-        Me.txtEuro.Size = New System.Drawing.Size(100, 20)
-        Me.txtEuro.TabIndex = 5
         '
         'lblE
         '
@@ -166,7 +169,7 @@ Partial Class frmMain
         '
         'gBox2
         '
-        Me.gBox2.Controls.Add(Me.txtTotal)
+        Me.gBox2.Controls.Add(Me.lblTotal)
         Me.gBox2.Controls.Add(Me.lblTD)
         Me.gBox2.Controls.Add(Me.btnCalc)
         Me.gBox2.Controls.Add(Me.txtPrice)
@@ -180,12 +183,13 @@ Partial Class frmMain
         Me.gBox2.TabStop = False
         Me.gBox2.Text = "p231 #3 Tea Time"
         '
-        'txtTotal
+        'lblTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(363, 45)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
-        Me.txtTotal.TabIndex = 6
+        Me.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTotal.Location = New System.Drawing.Point(360, 42)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(100, 23)
+        Me.lblTotal.TabIndex = 6
         '
         'lblTD
         '
@@ -239,7 +243,7 @@ Partial Class frmMain
         '
         'gBox3
         '
-        Me.gBox3.Controls.Add(Me.txtBill)
+        Me.gBox3.Controls.Add(Me.lblBill)
         Me.gBox3.Controls.Add(Me.lblB)
         Me.gBox3.Controls.Add(Me.btnCalcE)
         Me.gBox3.Controls.Add(Me.txtCurrent)
@@ -251,48 +255,15 @@ Partial Class frmMain
         Me.gBox3.Size = New System.Drawing.Size(544, 100)
         Me.gBox3.TabIndex = 2
         Me.gBox3.TabStop = False
-        Me.gBox3.Text = "p232 #4 Division Calculator"
+        Me.gBox3.Text = "p232 #4 Triple County Electric"
         '
-        'lblPr
+        'lblBill
         '
-        Me.lblPr.AutoSize = True
-        Me.lblPr.Location = New System.Drawing.Point(6, 28)
-        Me.lblPr.Name = "lblPr"
-        Me.lblPr.Size = New System.Drawing.Size(51, 13)
-        Me.lblPr.TabIndex = 0
-        Me.lblPr.Text = "Previous:"
-        '
-        'txtPrev
-        '
-        Me.txtPrev.Location = New System.Drawing.Point(9, 53)
-        Me.txtPrev.Name = "txtPrev"
-        Me.txtPrev.Size = New System.Drawing.Size(100, 20)
-        Me.txtPrev.TabIndex = 1
-        '
-        'lblCur
-        '
-        Me.lblCur.AutoSize = True
-        Me.lblCur.Location = New System.Drawing.Point(131, 28)
-        Me.lblCur.Name = "lblCur"
-        Me.lblCur.Size = New System.Drawing.Size(44, 13)
-        Me.lblCur.TabIndex = 2
-        Me.lblCur.Text = "Current:"
-        '
-        'txtCurrent
-        '
-        Me.txtCurrent.Location = New System.Drawing.Point(134, 53)
-        Me.txtCurrent.Name = "txtCurrent"
-        Me.txtCurrent.Size = New System.Drawing.Size(100, 20)
-        Me.txtCurrent.TabIndex = 3
-        '
-        'btnCalcE
-        '
-        Me.btnCalcE.Location = New System.Drawing.Point(254, 53)
-        Me.btnCalcE.Name = "btnCalcE"
-        Me.btnCalcE.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalcE.TabIndex = 4
-        Me.btnCalcE.Text = "Calculate"
-        Me.btnCalcE.UseVisualStyleBackColor = True
+        Me.lblBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblBill.Location = New System.Drawing.Point(354, 53)
+        Me.lblBill.Name = "lblBill"
+        Me.lblBill.Size = New System.Drawing.Size(100, 23)
+        Me.lblBill.TabIndex = 6
         '
         'lblB
         '
@@ -303,17 +274,51 @@ Partial Class frmMain
         Me.lblB.TabIndex = 5
         Me.lblB.Text = "Monthly Bill:"
         '
-        'txtBill
+        'btnCalcE
         '
-        Me.txtBill.Location = New System.Drawing.Point(365, 53)
-        Me.txtBill.Name = "txtBill"
-        Me.txtBill.Size = New System.Drawing.Size(100, 20)
-        Me.txtBill.TabIndex = 6
+        Me.btnCalcE.Location = New System.Drawing.Point(254, 53)
+        Me.btnCalcE.Name = "btnCalcE"
+        Me.btnCalcE.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcE.TabIndex = 4
+        Me.btnCalcE.Text = "Calculate"
+        Me.btnCalcE.UseVisualStyleBackColor = True
+        '
+        'txtCurrent
+        '
+        Me.txtCurrent.Location = New System.Drawing.Point(134, 53)
+        Me.txtCurrent.Name = "txtCurrent"
+        Me.txtCurrent.Size = New System.Drawing.Size(100, 20)
+        Me.txtCurrent.TabIndex = 3
+        '
+        'lblCur
+        '
+        Me.lblCur.AutoSize = True
+        Me.lblCur.Location = New System.Drawing.Point(131, 28)
+        Me.lblCur.Name = "lblCur"
+        Me.lblCur.Size = New System.Drawing.Size(44, 13)
+        Me.lblCur.TabIndex = 2
+        Me.lblCur.Text = "Current:"
+        '
+        'txtPrev
+        '
+        Me.txtPrev.Location = New System.Drawing.Point(9, 53)
+        Me.txtPrev.Name = "txtPrev"
+        Me.txtPrev.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrev.TabIndex = 1
+        '
+        'lblPr
+        '
+        Me.lblPr.AutoSize = True
+        Me.lblPr.Location = New System.Drawing.Point(6, 28)
+        Me.lblPr.Name = "lblPr"
+        Me.lblPr.Size = New System.Drawing.Size(51, 13)
+        Me.lblPr.TabIndex = 0
+        Me.lblPr.Text = "Previous:"
         '
         'gBox4
         '
+        Me.gBox4.Controls.Add(Me.lblQuotient)
         Me.gBox4.Controls.Add(Me.btnExit)
-        Me.gBox4.Controls.Add(Me.txtQuotient)
         Me.gBox4.Controls.Add(Me.lblQ)
         Me.gBox4.Controls.Add(Me.btnCalcD)
         Me.gBox4.Controls.Add(Me.txtNum2)
@@ -327,46 +332,22 @@ Partial Class frmMain
         Me.gBox4.TabStop = False
         Me.gBox4.Text = "p232 #5 Division Calculator"
         '
-        'lblN1
+        'lblQuotient
         '
-        Me.lblN1.AutoSize = True
-        Me.lblN1.Location = New System.Drawing.Point(6, 25)
-        Me.lblN1.Name = "lblN1"
-        Me.lblN1.Size = New System.Drawing.Size(36, 13)
-        Me.lblN1.TabIndex = 0
-        Me.lblN1.Text = "First#:"
+        Me.lblQuotient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblQuotient.Location = New System.Drawing.Point(347, 39)
+        Me.lblQuotient.Name = "lblQuotient"
+        Me.lblQuotient.Size = New System.Drawing.Size(100, 23)
+        Me.lblQuotient.TabIndex = 8
         '
-        'txtNum1
+        'btnExit
         '
-        Me.txtNum1.Location = New System.Drawing.Point(9, 41)
-        Me.txtNum1.Name = "txtNum1"
-        Me.txtNum1.Size = New System.Drawing.Size(100, 20)
-        Me.txtNum1.TabIndex = 1
-        '
-        'lblN2
-        '
-        Me.lblN2.AutoSize = True
-        Me.lblN2.Location = New System.Drawing.Point(131, 25)
-        Me.lblN2.Name = "lblN2"
-        Me.lblN2.Size = New System.Drawing.Size(54, 13)
-        Me.lblN2.TabIndex = 2
-        Me.lblN2.Text = "Second#:"
-        '
-        'txtNum2
-        '
-        Me.txtNum2.Location = New System.Drawing.Point(134, 41)
-        Me.txtNum2.Name = "txtNum2"
-        Me.txtNum2.Size = New System.Drawing.Size(100, 20)
-        Me.txtNum2.TabIndex = 3
-        '
-        'btnCalcD
-        '
-        Me.btnCalcD.Location = New System.Drawing.Point(254, 39)
-        Me.btnCalcD.Name = "btnCalcD"
-        Me.btnCalcD.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalcD.TabIndex = 4
-        Me.btnCalcD.Text = "Calculate"
-        Me.btnCalcD.UseVisualStyleBackColor = True
+        Me.btnExit.Location = New System.Drawing.Point(463, 41)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 7
+        Me.btnExit.Text = "&Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'lblQ
         '
@@ -377,21 +358,46 @@ Partial Class frmMain
         Me.lblQ.TabIndex = 5
         Me.lblQ.Text = "Quotient:"
         '
-        'txtQuotient
+        'btnCalcD
         '
-        Me.txtQuotient.Location = New System.Drawing.Point(347, 39)
-        Me.txtQuotient.Name = "txtQuotient"
-        Me.txtQuotient.Size = New System.Drawing.Size(100, 20)
-        Me.txtQuotient.TabIndex = 6
+        Me.btnCalcD.Location = New System.Drawing.Point(254, 39)
+        Me.btnCalcD.Name = "btnCalcD"
+        Me.btnCalcD.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcD.TabIndex = 4
+        Me.btnCalcD.Text = "Calculate"
+        Me.btnCalcD.UseVisualStyleBackColor = True
         '
-        'btnExit
+        'txtNum2
         '
-        Me.btnExit.Location = New System.Drawing.Point(463, 36)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 7
-        Me.btnExit.Text = "&Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.txtNum2.Location = New System.Drawing.Point(134, 41)
+        Me.txtNum2.Name = "txtNum2"
+        Me.txtNum2.Size = New System.Drawing.Size(100, 20)
+        Me.txtNum2.TabIndex = 3
+        '
+        'lblN2
+        '
+        Me.lblN2.AutoSize = True
+        Me.lblN2.Location = New System.Drawing.Point(131, 25)
+        Me.lblN2.Name = "lblN2"
+        Me.lblN2.Size = New System.Drawing.Size(54, 13)
+        Me.lblN2.TabIndex = 2
+        Me.lblN2.Text = "Second#:"
+        '
+        'txtNum1
+        '
+        Me.txtNum1.Location = New System.Drawing.Point(9, 41)
+        Me.txtNum1.Name = "txtNum1"
+        Me.txtNum1.Size = New System.Drawing.Size(100, 20)
+        Me.txtNum1.TabIndex = 1
+        '
+        'lblN1
+        '
+        Me.lblN1.AutoSize = True
+        Me.lblN1.Location = New System.Drawing.Point(6, 25)
+        Me.lblN1.Name = "lblN1"
+        Me.lblN1.Size = New System.Drawing.Size(36, 13)
+        Me.lblN1.TabIndex = 0
+        Me.lblN1.Text = "First#:"
         '
         'frmMain
         '
@@ -423,13 +429,9 @@ Partial Class frmMain
     Friend WithEvents lblAmDoll As Label
     Friend WithEvents txtAmDollar As TextBox
     Friend WithEvents lblE As Label
-    Friend WithEvents txtSAR As TextBox
     Friend WithEvents lblRand As Label
-    Friend WithEvents txtBP As TextBox
     Friend WithEvents lblPound As Label
-    Friend WithEvents txtEuro As TextBox
     Friend WithEvents gBox2 As GroupBox
-    Friend WithEvents txtTotal As TextBox
     Friend WithEvents lblTD As Label
     Friend WithEvents btnCalc As Button
     Friend WithEvents txtPrice As TextBox
@@ -437,7 +439,6 @@ Partial Class frmMain
     Friend WithEvents txtPound As TextBox
     Friend WithEvents lblP As Label
     Friend WithEvents gBox3 As GroupBox
-    Friend WithEvents txtBill As TextBox
     Friend WithEvents lblB As Label
     Friend WithEvents btnCalcE As Button
     Friend WithEvents txtCurrent As TextBox
@@ -445,7 +446,6 @@ Partial Class frmMain
     Friend WithEvents txtPrev As TextBox
     Friend WithEvents lblPr As Label
     Friend WithEvents gBox4 As GroupBox
-    Friend WithEvents txtQuotient As TextBox
     Friend WithEvents lblQ As Label
     Friend WithEvents btnCalcD As Button
     Friend WithEvents txtNum2 As TextBox
@@ -453,4 +453,10 @@ Partial Class frmMain
     Friend WithEvents txtNum1 As TextBox
     Friend WithEvents lblN1 As Label
     Friend WithEvents btnExit As Button
+    Friend WithEvents lblSAR As Label
+    Friend WithEvents lblBP As Label
+    Friend WithEvents lblEuro As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents lblBill As Label
+    Friend WithEvents lblQuotient As Label
 End Class

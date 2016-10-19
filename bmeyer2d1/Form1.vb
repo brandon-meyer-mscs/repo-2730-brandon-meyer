@@ -2,6 +2,10 @@
 'Purpose:   Currency, Tea, Electric, Quotient
 'Programmer: Brandon Meyer on 10/12/2016
 
+Option Strict On
+Option Explicit On
+Option Infer Off
+
 Public Class frmMain
     Private Sub btnEQ_Click(sender As Object, e As EventArgs) Handles btnEQ.Click
         'Convert American dollars to the Euro, British Pound, and South African Rand
@@ -15,26 +19,25 @@ Public Class frmMain
         Dim dblPound As Double
         Dim dblRand As Double
 
-        lblE.Text = String.Empty
-        lblPound.Text = String.Empty
-        lblRand.Text = String.Empty
+        lblEuro.Text = String.Empty
+        lblBP.Text = String.Empty
+        lblSAR.Text = String.Empty
 
         If txtAmDollar.Text = String.Empty Then
             MessageBox.Show("Please enter the number of American dollars.", "Currency Converter",
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else Double.TryParse(txtAmDollar.Text, dblAmDollar)
-            Double.TryParse(txtEuro.Text, dblEuro)
-            Double.TryParse(txtBP.Text, dblPound)
-            Double.TryParse(txtSAR.Text, dblRand)
+        Else
+            Double.TryParse(txtAmDollar.Text, dblAmDollar)
+
             'calculate dollar amount
-            dblEuro = txtAmDollar.Text * dblEURO_RATE
-            dblPound = txtAmDollar.Text * dblPOUND_RATE
-            dblRand = txtAmDollar.Text * dblRAND_RATE
+            dblEuro = dblAmDollar * dblEURO_RATE
+            dblPound = dblAmDollar * dblPOUND_RATE
+            dblRand = dblAmDollar * dblRAND_RATE
 
             'display totals
-            txtEuro.Text = dblEuro.ToString("c2")
-            txtBP.Text = dblPound.ToString("c2")
-            txtSAR.Text = dblRand.ToString("c2")
+            lblEuro.Text = dblEuro.ToString("c2")
+            lblBP.Text = dblPound.ToString("c2")
+            lblSAR.Text = dblRand.ToString("c2")
         End If
 
 
@@ -51,25 +54,25 @@ Public Class frmMain
         Dim dblPound As Double
         Dim dblRand As Double
 
-        lblE.Text = String.Empty
-        lblPound.Text = String.Empty
-        lblRand.Text = String.Empty
+        lblEuro.Text = String.Empty
+        lblBP.Text = String.Empty
+        lblSAR.Text = String.Empty
 
-
+        Double.TryParse(txtAmDollar.Text, dblAmDollar)
         If txtAmDollar.Text <> String.Empty Then
-            Double.TryParse(txtEuro.Text, dblEuro)
-            Double.TryParse(txtBP.Text, dblPound)
-            Double.TryParse(txtSAR.Text, dblRand)
+
             'calculate dollar amount
-            dblEuro = txtAmDollar.Text * dblEURO_RATE
-            dblPound = txtAmDollar.Text * dblPOUND_RATE
-            dblRand = txtAmDollar.Text * dblRAND_RATE
+            dblEuro = dblAmDollar * dblEURO_RATE
+            dblPound = dblAmDollar * dblPOUND_RATE
+            dblRand = dblAmDollar * dblRAND_RATE
 
             'display totals
-            txtEuro.Text = dblEuro.ToString("c2")
-            txtBP.Text = dblPound.ToString("c2")
-            txtSAR.Text = dblRand.ToString("c2")
-        Else Double.TryParse(txtAmDollar.Text, dblAmDollar)
+            lblEuro.Text = dblEuro.ToString("c2")
+            lblBP.Text = dblPound.ToString("c2")
+            lblSAR.Text = dblRand.ToString("c2")
+
+        Else
+
             MessageBox.Show("Please enter the number of American dollars.", "Currency Converter",
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
@@ -87,19 +90,19 @@ Public Class frmMain
         If btnCalc = DialogResult.Yes Then
             Double.TryParse(txtPound.Text, dblPound)
             Double.TryParse(txtPrice.Text, dblPrice)
-            Double.TryParse(txtTotal.Text, dblTotal)
+            Double.TryParse(lblTotal.Text, dblTotal)
             'Calculate cost
-            dblTotal = txtPound.Text * txtPrice.Text + 15
+            dblTotal = dblPound * dblPrice + 15
             'Display result
-            txtTotal.Text = dblTotal.ToString("c2")
+            lblTotal.Text = dblTotal.ToString("c2")
         Else
             Double.TryParse(txtPound.Text, dblPound)
             Double.TryParse(txtPrice.Text, dblPrice)
-            Double.TryParse(txtTotal.Text, dblTotal)
+            Double.TryParse(lblTotal.Text, dblTotal)
             'Calculate cost
-            dblTotal = txtPound.Text * txtPrice.Text
+            dblTotal = dblPound * dblPrice
             'Display result
-            txtTotal.Text = dblTotal.ToString("c2")
+            lblTotal.Text = dblTotal.ToString("c2")
 
         End If
     End Sub
@@ -119,10 +122,10 @@ Public Class frmMain
             'Calculate Bill
             Double.TryParse(txtPrev.Text, dblPrev)
             Double.TryParse(txtCurrent.Text, dblCurrent)
-            Double.TryParse(txtBill.Text, dblBill)
-            dblBill = txtCurrent.Text - txtPrev.Text * dblRate
+            Double.TryParse(lblBill.Text, dblBill)
+            dblBill = (dblCurrent - dblPrev) * dblRate
             'Display result
-            txtBill.Text = dblBill.ToString("c2")
+            lblBill.Text = dblBill.ToString("c2")
 
         End If
 
@@ -131,27 +134,33 @@ Public Class frmMain
     End Sub
 
     Private Sub btnCalcD_Click(sender As Object, e As EventArgs) Handles btnCalcD.Click
-        Dim intNum1 As Integer
-        Dim intNum2 As Integer
-        Dim intQuotient As Integer
+        Dim dblNum1 As Double
+        Dim dblNum2 As Double
+        Dim dblQuotient As Double
 
-        Integer.TryParse(txtNum1.Text, intNum1)
-        Integer.TryParse(txtNum2.Text, intNum2)
-        Integer.TryParse(txtQuotient.Text, intQuotient)
+        Double.TryParse(txtNum1.Text, dblNum1)
+        Double.TryParse(txtNum2.Text, dblNum2)
+
+
         'Swap numbers for division
-        If intNum1 > intNum2 Then
-            Dim intTemp As Integer
-            intTemp = intNum1
-            intNum1 = intNum2
-            intNum2 = intTemp
-            intQuotient = txtNum1.Text / txtNum2.Text
-            'Display answer
-            txtQuotient.Text = intQuotient.ToString()
-        Else
-            Dim intTemp As Integer
-            intTemp = 0
+        Dim dblTemp As Double
+        If dblNum1 > dblNum2 Then
+
+            dblTemp = dblNum1
+            dblNum1 = dblNum2
+            dblNum2 = dblTemp
+        End If
+
+        If dblNum1 = 0 Then
             MessageBox.Show("Cannot divide by 0.", "Division by 0",
                 MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+
+            dblQuotient = dblNum2 / dblNum1
+
+            'Display answer
+            lblQuotient.Text = dblQuotient.ToString()
+
         End If
 
     End Sub
