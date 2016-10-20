@@ -113,16 +113,14 @@ Public Class frmMain
         Dim dblCurrent As Double
         Dim dblBill As Double
 
-
-        If txtPrev.Text = String.Empty Or
-                txtCurrent.Text < txtPrev.Text Then
+        Double.TryParse(txtPrev.Text, dblPrev)
+        Double.TryParse(txtCurrent.Text, dblCurrent)
+        If txtPrev.Text = String.Empty OrElse
+                dblCurrent < dblPrev Then
             MessageBox.Show("Current amount must be greater than or equal to Previous.", "Triple County",
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             'Calculate Bill
-            Double.TryParse(txtPrev.Text, dblPrev)
-            Double.TryParse(txtCurrent.Text, dblCurrent)
-            Double.TryParse(lblBill.Text, dblBill)
             dblBill = (dblCurrent - dblPrev) * dblRate
             'Display result
             lblBill.Text = dblBill.ToString("c2")
