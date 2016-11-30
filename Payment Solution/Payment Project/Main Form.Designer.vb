@@ -30,7 +30,7 @@ Partial Class frmMain
         Me.lblPay = New System.Windows.Forms.Label()
         Me.btnCalc = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.lstRates = New System.Windows.Forms.ListBox()
+        Me.cboRates = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -106,21 +106,20 @@ Partial Class frmMain
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'lstRates
+        'cboRates
         '
-        Me.lstRates.FormattingEnabled = True
-        Me.lstRates.ItemHeight = 20
-        Me.lstRates.Location = New System.Drawing.Point(263, 83)
-        Me.lstRates.Name = "lstRates"
-        Me.lstRates.Size = New System.Drawing.Size(85, 124)
-        Me.lstRates.TabIndex = 3
+        Me.cboRates.FormattingEnabled = True
+        Me.cboRates.Location = New System.Drawing.Point(238, 79)
+        Me.cboRates.Name = "cboRates"
+        Me.cboRates.Size = New System.Drawing.Size(121, 28)
+        Me.cboRates.TabIndex = 8
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(366, 277)
-        Me.Controls.Add(Me.lstRates)
+        Me.Controls.Add(Me.cboRates)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.lblPay)
@@ -148,5 +147,5 @@ End Sub
     Friend WithEvents lblPay As Label
     Friend WithEvents btnCalc As Button
     Friend WithEvents btnExit As Button
-    Friend WithEvents lstRates As ListBox
+    Friend WithEvents cboRates As ComboBox
 End Class

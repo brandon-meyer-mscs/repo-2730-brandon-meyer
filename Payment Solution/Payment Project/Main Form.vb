@@ -12,9 +12,9 @@ Public Class frmMain
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' fill list box with rates and select first rate
         For dblRates As Double = 2 To 7 Step 0.5
-            lstRates.Items.Add(dblRates.ToString("n1"))
+            cboRates.Items.Add(dblRates.ToString("n1"))
         Next dblRates
-        lstRates.SelectedItem = "3.0"
+        cboRates.SelectedItem = "3.0"
     End Sub
 
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
@@ -24,7 +24,7 @@ Public Class frmMain
         Dim dblPay As Double
 
         Integer.TryParse(txtPrincipal.Text, intPrincipal)
-        Double.TryParse(lstRates.SelectedItem.ToString, dblRate)
+        Double.TryParse(cboRates.SelectedItem.ToString, dblRate)
 
         dblRate = dblRate / 100
 
@@ -46,7 +46,7 @@ Public Class frmMain
         txtPrincipal.SelectAll()
     End Sub
 
-    Private Sub ClearPayment(sender As Object, e As EventArgs) Handles lstRates.SelectedValueChanged, txtPrincipal.TextChanged
+    Private Sub ClearPayment(sender As Object, e As EventArgs) Handles txtPrincipal.TextChanged
         lblPay.Text = String.Empty
     End Sub
 
