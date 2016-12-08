@@ -63,6 +63,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "YouDoIt2", "YouDoIt2\YouDoI
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bmeyer3d1", "bmeyer3d1\bmeyer3d1.vbproj", "{15FC8068-43A1-43C1-A0CA-FEB2F44CD515}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bmeyer3e1", "bmeyer3e1\bmeyer3e1.vbproj", "{AB9A329C-9C4F-41C6-BCAF-427742795B19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{15FC8068-43A1-43C1-A0CA-FEB2F44CD515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15FC8068-43A1-43C1-A0CA-FEB2F44CD515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15FC8068-43A1-43C1-A0CA-FEB2F44CD515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9A329C-9C4F-41C6-BCAF-427742795B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9A329C-9C4F-41C6-BCAF-427742795B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9A329C-9C4F-41C6-BCAF-427742795B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9A329C-9C4F-41C6-BCAF-427742795B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
